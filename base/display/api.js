@@ -1162,12 +1162,13 @@ var InternalRenderTask = (function InternalRenderTaskClosure() {
                                         this._continue.bind(this),
                                         this.stepper);
       if (this.operatorListIdx === this.operatorList.argsArray.length) {
-        this.running = false;
-        if (this.operatorList.lastChunk) {
+        this.running = false;        
+      }
+               
+      if (this.operatorList.lastChunk) {
           this.gfx.endDrawing();
           this.callback();
-        }
-      }
+      }         
     }
 
   };
